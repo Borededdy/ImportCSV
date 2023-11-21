@@ -10,12 +10,12 @@ internal class Program
         using (var reader = new StreamReader("C:\\xampp\\htdocs\\file.csv"))
         using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
         {
-            var records = new List<RigaOrdineCsv>();
+            var records = new List<RowOrderCSV>();
             csv.Read();
             csv.ReadHeader();
             while (csv.Read())
             {
-                var record = new RigaOrdineCsv();
+                var record = new RowOrderCSV();
 
                 record.order_id = csv.GetField<int>("order_id");
                 record.address_type = csv.GetField<string>("address_type");

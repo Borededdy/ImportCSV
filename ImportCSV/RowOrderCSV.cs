@@ -2,7 +2,7 @@
 
 namespace ImportCSV
 {
-    public class RigaOrdineCsv
+    public class RowOrderCSV
     {
         public int order_id { get; set; }
         public string address_type { get; set; }
